@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Pancake;
 using UnityEngine;
 
 public class GoMove : MonoBehaviour
@@ -58,7 +57,7 @@ public class GoMove : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (!points.IsNullOrEmpty())
+        if (points!=null && points.Count>0)
         {
             try
             {
@@ -86,7 +85,6 @@ public class GoMove : MonoBehaviour
         _isMoving = true;
     }
     
-    [Button]
     public void ReverseMoving()
     {
         _reverse = !_reverse;
